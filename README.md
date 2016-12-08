@@ -51,7 +51,8 @@ Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
     enfermedades('sin resultado').    
     ```
 
-se crearon las pregunatas por cada enfermedad:
+Se crearon las pregunatas por cada enfermedad:
+
 ```ruby  
   colesterol :- tiene_colesterol,
    pregunta('tiene inchazon en alguna extremidad del cuerpo?'),
