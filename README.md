@@ -34,7 +34,7 @@ Nos sirve para que el software se adapte a una problemática de nuestra vida dia
 * * *
 # PROBLEMÁTICA
 Cuando se tiene una enfermedad o algun sintoma de ella se va al doctor el cual llena un cuestionario en una hoja de papel y te hace preguntas de como te sientes y que sintomas presentas y conforme se van contestando las preguntas el va deduciendo mediante sus conocimientos cual es la enfermedad que padece el paciente.
-![](https://github.com/edghareii/proyecto/blob/master/encuesta.jpg@)
+![](https://github.com/edghareii/proyecto/blob/master/encuesta.jpg)
 
 * * *
 # JUSTIFICACION
@@ -44,10 +44,10 @@ Mediante eso se desarrollo un formulario médico con programacion logica basado 
 
 Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
 
-`enfermedades(colesterol):-colesterol,!. `
-`enfermedades(diabete):-diabete,!.       `
-`enfermedades(gastritis):-gastritis,!.   `
-`enfermedades('sin resultado').          `
+```enfermedades(colesterol):-colesterol,!. 
+   enfermedades(diabete):-diabete,!.       
+   enfermedades(gastritis):-gastritis,!.   
+   enfermedades('sin resultado').          ```
 
 se crearon las pregunatas por cada enfermedad:
 `colesterol :- tiene_colesterol,`
