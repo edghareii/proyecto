@@ -48,11 +48,11 @@ Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
    enfermedades(colesterol):-colesterol,!. 
     enfermedades(diabete):-diabete,!.       
     enfermedades(gastritis):-gastritis,!.   
-    enfermedades('sin resultado').    
-    ```
+    enfermedades('sin resultado').
+   ``` 
 
 Se crearon las pregunatas por cada enfermedad:
-- - -
+
 ```ruby  
   colesterol :- tiene_colesterol,
    pregunta('tiene inchazon en alguna extremidad del cuerpo?'),
