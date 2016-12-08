@@ -44,7 +44,7 @@ Mediante eso se desarrollo un formulario médico con programacion logica basado 
 
 Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
 
-``` 
+```ruby 
    enfermedades(colesterol):-colesterol,!. 
     enfermedades(diabete):-diabete,!.       
     enfermedades(gastritis):-gastritis,!.   
@@ -52,7 +52,8 @@ Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
     ```
 
 se crearon las pregunatas por cada enfermedad:
-`  colesterol :- tiene_colesterol,
+```ruby  
+   colesterol :- tiene_colesterol,
    pregunta('tiene inchazon en alguna extremidad del cuerpo?'),
    pregunta('tiene perdida de equilibrio'),
 
@@ -62,7 +63,8 @@ se crearon las pregunatas por cada enfermedad:
 
    gastritis :- tiene_gastritis,
    pregunta('tiene Hinchazón abdominal'),
-   pregunta('tiene Ardor de estómago'),`
+   pregunta('tiene Ardor de estómago'),
+   ```
 
 en caso de padecer alguna enfermadad que no esta agregada en el programa este dira que es desconocido.
 
@@ -70,9 +72,11 @@ en caso de padecer alguna enfermadad que no esta agregada en el programa este di
 
 esto es una guia para poder identificar que enfermedad en caso de contestar la primera pregunta  con un "SI" entrara a la primera enfermedad y pasara a contestar los sintomas de dicha en enfermedad, en el caso de contestar con un "NO" pasara a la siguiente enfermedad.
 
-`  tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
+```ruby
+   tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
    tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
-   tiene_gastritis:- pregunta('Hinchazón abdominal'),!.`
+   tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
+   ```
 * * *
 
 # RESULTADOS
