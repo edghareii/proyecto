@@ -44,10 +44,10 @@ Mediante eso se desarrollo un formulario médico con programacion logica basado 
 
 Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
 
-`  enfermedades(colesterol):-colesterol,!. 
+``  enfermedades(colesterol):-colesterol,!. 
    enfermedades(diabete):-diabete,!.       
    enfermedades(gastritis):-gastritis,!.   
-   enfermedades('sin resultado').     `
+   enfermedades('sin resultado').    ``
 
 se crearon las pregunatas por cada enfermedad:
 `  colesterol :- tiene_colesterol,
