@@ -2,7 +2,7 @@
 :-use_module(library(pce_style_item)). %libreria que permite crear label, button etc para hacer diseño del sistema.
 menu1:- %nombre de una regla que permite crear objetos
 	new(Menu, dialog('PROLOG', size(500,500))), %tipo de dialogo con su tamaño
-	new(L, label(nombre,'Diagnostico Medico')),	 %label con el nombre que estara dentro del label
+	new(L, label(nombre,'Diagnostico Medico')),  %label con el nombre que estara dentro del label
 	%crear variables que va a contener preguntas y respuestas
 	new(@texto, label(nombre,'segun la respuesta dadas se obtendra un resultado')),
 	new(@respl, label(nombre,'')),

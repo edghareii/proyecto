@@ -20,3 +20,9 @@ menu1:- %nombre de una regla que permite crear objetos
 	send(Menu, open_centered),
 	send(@texto,font,font(comic,bold,10)),
 	send(L,font,font(comic,bold,25)).
+
+%se observan las enfermedades que serviran para diagnosticar cada caso
+enfermedades(colesterol):-colesterol,!.
+enfermedades(diabete):-diabete,!.
+enfermedades(gastritis):-gastritis,!.
+enfermedades('sin resultado').
