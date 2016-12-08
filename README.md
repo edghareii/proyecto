@@ -103,10 +103,15 @@ A diferencia  de los lenguajes de programación clásicos, que dividen un proble
 
 # REFERENCIAS
 [http://comohacerpara.com/sintomas-de-colesterol-alto_7842a.html](http://)
+- - -
 [http://sintomas.com.es/gastritis](http://)
+- - -
 [https://medlineplus.gov/spanish/ency/article/000305.htm](http://)
+- - -
 [https://www.youtube.com/watch?v=jIv5Wn_Zgnc&t=225s](http://)
+- - -
 [https://www.youtube.com/watch?v=F8aE_iIjS2I&t=14s](http://)
+- - -
 [https://www.youtube.com/watch?v=F8aE_iIjS2I&t=14s](http://)
 
 
