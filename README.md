@@ -53,7 +53,7 @@ Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
 
 se crearon las pregunatas por cada enfermedad:
 ```ruby  
-   colesterol :- tiene_colesterol,
+  colesterol :- tiene_colesterol,
    pregunta('tiene inchazon en alguna extremidad del cuerpo?'),
    pregunta('tiene perdida de equilibrio'),
 
@@ -73,7 +73,7 @@ en caso de padecer alguna enfermadad que no esta agregada en el programa este di
 esto es una guia para poder identificar que enfermedad en caso de contestar la primera pregunta  con un "SI" entrara a la primera enfermedad y pasara a contestar los sintomas de dicha en enfermedad, en el caso de contestar con un "NO" pasara a la siguiente enfermedad.
 
 ```ruby
-   tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
+  tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
    tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
    tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
    ```
