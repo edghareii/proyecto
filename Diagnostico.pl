@@ -67,3 +67,52 @@ desconocido :- se_deconoce_enfermedad.
 tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
 tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
 tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
+%Es una guia para poder identificar que enfermedad es--??
+tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
+tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
+tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
+
+%que solo permita considerar "SI" o "NO"
+:-dynamic si/1,no/1.
+
+%Se dan la configuraciones donde se ira adaptando si o no de
+%manera en que se vaya dando las preguntas en el cuadro de dialogo
+preguntar(Problema):- new(Di,dialog('examen diagnostico')),
+new(L2,label(texto,'Responde las siguientes preguntas:')),
+new(La,label(prob,Problema)),
+%se estan creando los botones "SI"/"NO"
+new(B1,button(si,and(message(Di,return,si)))),
+new(B2,button(no,and(message(Di,return,no)))),
+send(Di,append(L2)),
+send(Di,append(La)),
+send(Di,append(B1)),
+send(Di,append(B2)),
+
+send(Di,default_button,si),
+send(Di,open_centered),get(Di,confirm,Answer),
+write(Answer),send(Di,destroy),
+
+%se preguntara si o no del problema
+((Answer==si)->assert(si(Problema));
+assert(no(Problema)),fail).
+pregunta(S):-(si(S)->true; (no(S)->fail; preguntar(S))).
+
+%en caso de darle salir se limpiara
+limpiar :- retract(si(_)),fail.
+limpiar :- retract(no(_)),fail.
+limpiar.
+
+%se ira llamndo a las enfermedades
+botones :- lim,
+send(@boton,free),
+send(@btncarrera,free),
+enfermedades(Enfer),
+send(@texto, selection('Su diagnostico segun los sintomas es: ')),
+
+send(@respl, selection(Enfer)),
+send(@respl,font,font(comic,bold,20)),
+new(@boton, button('inicia',message(@prolog,botones))),
+send(Menu, display,@boton,point(40,50)),
+send(Menu, display,@btncarrera,point(20,50)),
+limpiar.
+lim:- send(@respl, selection('')).
