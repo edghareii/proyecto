@@ -67,10 +67,6 @@ desconocido :- se_deconoce_enfermedad.
 tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
 tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
 tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
-%Es una guia para poder identificar que enfermedad es--??
-tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
-tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
-tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
 
 %que solo permita considerar "SI" o "NO"
 :-dynamic si/1,no/1.
