@@ -52,7 +52,7 @@ Se crearon la enfermadades que nos va ha servir para diagnosticar cada caso:
     ```
 
 Se crearon las pregunatas por cada enfermedad:
-
+- - -
 ```ruby  
   colesterol :- tiene_colesterol,
    pregunta('tiene inchazon en alguna extremidad del cuerpo?'),
