@@ -26,3 +26,39 @@ enfermedades(colesterol):-colesterol,!.
 enfermedades(diabete):-diabete,!.
 enfermedades(gastritis):-gastritis,!.
 enfermedades('sin resultado').
+%se observan las enfermedades que serviran para diagnosticar cada caso
+enfermedades(colesterol):-colesterol,!.
+enfermedades(diabete):-diabete,!.
+enfermedades(gastritis):-gastritis,!.
+enfermedades('sin resultado').
+
+%Reglas ------- toda la parte del conocimiento
+colesterol :- tiene_colesterol,
+pregunta('tiene inchazon en alguna extremidad del cuerpo?'),
+pregunta('tiene perdida de equilibrio'),
+pregunta('tiene adormecimiento de las extremidades'),
+pregunta('tiene visión borrosa'),
+pregunta('tiene dolor en el pecho'),
+pregunta('tiene agitación al caminar o realizar las actividades físicas diarias'),
+pregunta('tiene Ganas de dormir tras ingerir las comidas principales').
+
+diabete :- tiene_diabete,
+pregunta('padece de orinar con frecuencia'),
+pregunta('tiene Boca y piel seca'),
+pregunta('tiene náuseas o vómitos'),
+pregunta('tiene Pérdida de peso'),
+pregunta('tiene llagas o magulladuras que demoran en sanarse e infecciones frecuentes'),
+pregunta('tiene	entumecimiento o sensación de hormigueo en los pies'),
+pregunta('tiene encías rojas, hinchadas o adoloridas').
+
+gastritis :- tiene_gastritis,
+pregunta('tiene Hinchazón abdominal'),
+pregunta('tiene Ardor de estómago'),
+pregunta('tiene Cólicos estomacales'),
+pregunta('tiene Sangre en las heces'),
+pregunta('tiene Mal sabor de boca'),
+pregunta('padece de Eructos'),
+pregunta('padece de Gases o flatulencias').
+
+
+desconocido :- se_deconoce_enfermedad.

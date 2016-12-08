@@ -62,3 +62,8 @@ pregunta('padece de Gases o flatulencias').
 
 
 desconocido :- se_deconoce_enfermedad.
+
+%Es una guia para poder identificar que enfermedad es--??
+tiene_colesterol:- pregunta('tiene inchazon en alguna extremidad del cuerpo?'),!.
+tiene_diabete:- pregunta('padece de orinar con frecuencia'),!.
+tiene_gastritis:- pregunta('Hinchazón abdominal'),!.
